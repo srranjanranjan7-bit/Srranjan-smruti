@@ -3,81 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smruti Gaming Official</title>
+    <title>Smruti Gaming Videos</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: #0b0b0b url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #0b0b0b;
             color: white;
             margin: 0;
             text-align: center;
         }
-        .overlay { background: rgba(0, 0, 0, 0.85); min-height: 250vh; padding-bottom: 50px; }
-        header { height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(to bottom, rgba(255, 69, 0, 0.4), transparent); }
-        h1 { font-size: 3em; color: #ff4500; text-shadow: 2px 2px 15px black; margin: 0; }
-        .section { padding: 60px 20px; border-bottom: 1px solid #333; }
-        .video-card { background: #1e1e1e; padding: 20px; border-radius: 20px; border: 2px solid #ff4500; max-width: 400px; margin: auto; box-shadow: 0 0 20px rgba(255, 69, 0, 0.3); }
-        iframe { border-radius: 15px; width: 100%; height: 500px; }
-        .sub-btn { background: #ff0000; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 20px; }
-        
-        /* Photo Gallery Grid */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
+        header {
+            background: linear-gradient(45deg, #ff4500, #ff8c00);
+            padding: 20px;
+            margin-bottom: 30px;
         }
-        .gallery img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+        .video-card {
+            background: #1e1e1e;
+            padding: 15px;
             border-radius: 15px;
             border: 2px solid #ff4500;
-            transition: 0.4s;
+            width: 90%;
+            max-width: 360px;
         }
-        .gallery img:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(255, 69, 0, 0.5); }
+        iframe {
+            border-radius: 10px;
+            width: 100%;
+        }
+        h2 { color: #ff4500; margin-top: 0; }
+        .sub-btn {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
-<div class="overlay">
     <header>
         <h1>🎮 Smruti Gaming</h1>
-        <p>Welcome to the Pro Gaming Zone!</p>
     </header>
 
-    <div class="section">
-        <h2>Latest Gameplay Shorts 🎥</h2>
+    <div class="video-container">
         <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/s3FSq3moTw8" frameborder="0" allowfullscreen></iframe>
-            <br>
-            <a href="https://www.youtube.com/@SmrutiGaming-n3e?sub_confirmation=1" target="_blank" class="sub-btn">SUBSCRIBE NOW</a>
+            <h2>Live Stream 🔴</h2>
+            <iframe height="200" src="https://www.youtube.com/embed/QAzhTBxms-k" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-card">
+            <h2>Gaming Short ⚡</h2>
+            <iframe height="550" src="https://www.youtube.com/embed/-ZejSem2qiQ" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 
-    <div class="section">
-        <h2>My Gaming Gallery 📸</h2>
-        <p>Here are my gaming moments!</p>
-        <div class="gallery">
-            <img src="11765609469558.jpg" alt="Gaming Image 1">
+    <a href="https://www.youtube.com/@SmrutiGaming-n3e" target="_blank" class="sub-btn">Visit My Channel</a>
+    <img src="11765609469558.jpg" alt="Gaming Image 1">
             <img src="IMG_20251209_155425.jpg" alt="Gaming Image 2">
             <img src="1765609673201.jpg" alt="Gaming Image 3">
             <img src="1765003847825.jpg" alt="Gaming Image 4">
-        </div>
-    </div>
 
-    <div class="section">
-        <h2>About Smruti Gaming</h2>
-        <p>ମୁଁ ଜଣେ Computer Science ଛାତ୍ର ଏବଂ ମତେ Gaming ଭଲ ଲାଗେ। <br> ମୋ YouTube ଚ୍ୟାନେଲ୍‌କୁ ଯାଇ ଆପଣ ଅଧିକ ଭିଡିଓ ଦେଖିପାରିବେ।</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Smruti Gaming | Created with Love</p>
+    <footer style="margin-top: 50px; color: #555;">
+        <p>&copy; 2026 Smruti Gaming</p>
     </footer>
-</div>
 
 </body>
 </html>
+
