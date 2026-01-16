@@ -22,6 +22,13 @@
             <option value="poco">Poco M3 / M-Series</option>
             <option value="realme">Realme All Models</option>
             <option value="iphone">iPhone / IOS</option>
+            <option value="oppo">oppo all/ALl Models</option>
+            <option value="red me"red me all/ALl Models<option>
+            <option value="Motorola "Motorola all/All Models<option>
+            <option value="Samsung"Samsung all/All Models<optio>
+                
+           
+       
         </select>
         <br>
         <button onclick="getSens()">GET SENSITIVITY</button>
@@ -41,13 +48,39 @@
             var res = document.getElementById("res");
             if(!d) return alert("Select Device!");
             res.style.display = "block";
-            if(d === "poco") {
-                document.getElementById("dName").innerText = "POCO M3 SETTINGS";
-                document.getElementById("dVal").innerHTML = "General: 100 <br>Red Dot: 94 <br>Fire Button: 42%";
-            } else {
-                document.getElementById("dName").innerText = "UNIVERSAL SETTINGS";
-                document.getElementById("dVal").innerHTML = "General: 98 <br>Red Dot: 90 <br>Fire Button: 48%";
-            }
+           // ସବୁ ବ୍ରାଣ୍ଡ୍‌ ପାଇଁ ସେଟିଙ୍ଗ୍ସ
+    if (d === "poco") {
+        dName.innerText = "POCO M3 / M-SERIES";
+        dVal.innerHTML = "General: 100 <br>Red Dot: 94 <br>Fire Button: 42%";
+    } 
+    else if (d === "realme") {
+        dName.innerText = "REALME ALL MODELS";
+        dVal.innerHTML = "General: 96 <br>Red Dot: 92 <br>Fire Button: 46%";
+    } 
+    else if (d === "iphone") {
+        dName.innerText = "IPHONE / IOS SETTINGS";
+        dVal.innerHTML = "General: 85 <br>Red Dot: 80 <br>Fire Button: 35%";
+    } 
+    else if (d === "oppo") {
+        dName.innerText = "OPPO ALL MODELS";
+        dVal.innerHTML = "General: 98 <br>Red Dot: 95 <br>Fire Button: 48%";
+    }
+    else if (d === "redme") {
+        dName.innerText = "REDMI ALL MODELS";
+        dVal.innerHTML = "General: 99 <br>Red Dot: 94 <br>Fire Button: 44%";
+    }
+    else if (d === "motorola") {
+        dName.innerText = "MOTOROLA ALL MODELS";
+        dVal.innerHTML = "General: 94 <br>Red Dot: 88 <br>Fire Button: 50%";
+    }
+    else if (d === "samsung") {
+        dName.innerText = "SAMSUNG ALL MODELS";
+        dVal.innerHTML = "General: 100 <br>Red Dot: 97 <br>Fire Button: 52%";
+    }
+    else {
+        dName.innerText = "UNIVERSAL SETTINGS";
+        dVal.innerHTML = "General: 98 <br>Red Dot: 90 <br>Fire Button: 48%";
+    }
         }
     </script>
 </body>
