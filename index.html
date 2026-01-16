@@ -3,70 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro FF Sensitivity - Smruti Gaming</title>
+    <title>Professional FF Sensitivity Hub</title>
     <style>
+        :root { --primary: #ff4500; --bg: #0a0a0a; --card: #151515; }
+        
         body {
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://wallpaperaccess.com/full/1535199.jpg');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://wallpaperaccess.com/full/1535199.jpg');
             background-size: cover;
             background-attachment: fixed;
             color: white;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 20px;
             text-align: center;
         }
 
-        .container {
-            background: rgba(10, 10, 10, 0.95);
+        .main-container { max-width: 700px; margin: auto; }
+
+        .glass-card {
+            background: rgba(20, 20, 20, 0.95);
             padding: 30px;
-            border-radius: 25px;
-            border: 2px solid #ff4500;
-            max-width: 800px;
-            margin: auto;
-            box-shadow: 0px 0px 30px rgba(255, 69, 0, 0.3);
-        }
-
-        h1 { color: #ff4500; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 20px; }
-
-        /* Pro Players Section */
-        .pro-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+            border-radius: 20px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 30px rgba(255, 69, 0, 0.3);
             margin-bottom: 30px;
         }
 
-        .player-card {
-            background: #222;
-            padding: 10px;
-            border-radius: 15px;
-            width: 110px;
-            border: 1px solid #444;
-            transition: 0.3s;
-            cursor: pointer;
-        }
+        h1 { color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
+        h2 { font-size: 1.2rem; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
 
-        .player-card:hover { border-color: #ff4500; transform: scale(1.05); }
-
-        .player-card img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            border: 2px solid #ff4500;
-            margin-bottom: 8px;
-        }
-
-        .player-card p { font-size: 12px; margin: 0; font-weight: bold; }
-
-        /* Form Section */
-        .input-box {
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 20px;
-        }
-
+        /* Mobile Selection Section */
         select, button {
             width: 100%;
             padding: 15px;
@@ -74,70 +40,173 @@
             border-radius: 10px;
             font-size: 18px;
             border: none;
+            outline: none;
         }
 
-        select { background: #333; color: white; border: 1px solid #555; }
+        select { background: #252525; color: white; border: 1px solid #444; }
 
         button {
-            background: #ff4500;
+            background: var(--primary);
             color: white;
             font-weight: bold;
             cursor: pointer;
-            text-transform: uppercase;
+            transition: 0.3s;
         }
 
-        button:hover { background: #fff; color: #ff4500; }
+        button:hover { background: white; color: var(--primary); }
 
-        .result {
-            margin-top: 20px;
-            background: rgba(255, 69, 0, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            display: none;
-            border: 1px solid #ff4500;
+        /* Pro Gamer List Section */
+        .gamer-list {
             text-align: left;
+            margin-top: 20px;
         }
 
-        .yt-btn {
+        .gamer-item {
+            background: #202020;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .gamer-item:hover { border-color: var(--primary); background: #252525; }
+
+        .gamer-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 2px solid var(--primary);
+        }
+
+        .gamer-info h3 { margin: 0; font-size: 1.1rem; color: var(--primary); }
+        .gamer-info p { margin: 5px 0 0 0; font-size: 0.9rem; color: #aaa; }
+
+        /* Result Popup Overlay */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: #111;
+            padding: 30px;
+            border-radius: 20px;
+            border: 3px solid var(--primary);
+            z-index: 1000;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 0 50px black;
+        }
+
+        #close-btn { background: #444; margin-top: 20px; padding: 10px; font-size: 14px; }
+
+        .yt-link {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 20px;
             background: #ff0000;
             color: white;
             padding: 15px 30px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 50px;
-            box-shadow: 0 0 15px #ff0000;
+            box-shadow: 0 0 20px #ff0000;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>PRO PLAYER SENSITIVITY 🔥</h1>
-        
-        <p>Pro Players ଙ୍କ Logo ଉପରେ କ୍ଲିକ୍ କରନ୍ତୁ କିମ୍ବା ନିଜ ଫୋନ୍ ବାଛନ୍ତୁ:</p>
+    <div class="main-container">
+        <div class="glass-card">
+            <h1>SMRUTI GAMING HUB 🔥</h1>
+            <h2>📱 GET MOBILE SENSITIVITY</h2>
+            <p>Select your phone model below:</p>
+            
+            <select id="mobile-model">
+                <option value="">-- Choose Phone --</option>
+                <option value="poco">Poco M3 / M-Series</option>
+                <option value="realme">Realme All Models</option>
+                <option value="vivo">Vivo / IQOO</option>
+                <option value="redmi">Redmi Note Series</option>
+                <option value="samsung">Samsung Series</option>
+                <option value="iphone">iPhone (IOS)</option>
+            </select>
+            <button onclick="showMobileSens()">GET SETTINGS</button>
+        </div>
 
-        <div class="pro-section">
-            <div class="player-card" onclick="setPro('Raistar', 100, 95, 45)">
-                <img src="https://i.pinimg.com/736x/8c/8b/4c/8c8b4c0634699564619736c761e3d74a.jpg" alt="Raistar">
-                <p>RAISTAR</p>
+        <div class="glass-card">
+            <h2>🏆 POPULAR GAMERS SETTINGS</h2>
+            <p>Click on any gamer to see their settings:</p>
+
+            <div class="gamer-list">
+                <div class="gamer-item" onclick="showPro('Raistar', 100, 95, 45, 450)">
+                    <img src="https://wallpapers.com/images/hd/raistar-pfp-vqy60x2213876at0.jpg" alt="Raistar">
+                    <div class="gamer-info"><h3>RAISTAR</h3><p>One Tap Specialist</p></div>
+                </div>
+
+                <div class="gamer-item" onclick="showPro('White 444', 100, 100, 40, 'None')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_xU8v7vL4fN8tUoK_T2_U9oN7pE0K8YvG9A&s" alt="White 444">
+                    <div class="gamer-info"><h3>WHITE 444</h3><p>Fastest Headshot Player</p></div>
+                </div>
+
+                <div class="gamer-item" onclick="showPro('Ajjubhai', 95, 85, 50, 'Standard')">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_mN-Y7qM-R-W-P7V_N7D_E7M7M7M7M7M7M=s160-c-k-c0x00ffffff-no-rj" alt="Total Gaming">
+                    <div class="gamer-info"><h3>AJJUBHAI</h3><p>Total Gaming Settings</p></div>
+                </div>
+
+                <div class="gamer-item" onclick="showPro('Smruti Gaming', 99, 90, 48, 420)">
+                    <img src="https://img.icons8.com/color/144/free-fire.png" alt="Smruti Gaming">
+                    <div class="gamer-info"><h3>SMRUTI GAMING</h3><p>Best For All Devices</p></div>
+                </div>
             </div>
-            <div class="player-card" onclick="setPro('White 444', 100, 100, 40)">
-                <img src="https://i.pinimg.com/736x/eb/45/64/eb4564998064973347c66763f06941f6.jpg" alt="White 444">
-                <p>WHITE 444</p>
-            </div>
-            <div class="player-card" onclick="setPro('Ajjubhai', 95, 85, 50)">
-                <img src="https://i.pinimg.com/originals/9e/7b/03/9e7b03666d910606f23f666b6c0e5a6a.jpg" alt="Ajjubhai">
-                <p>AJJUBHAI</p>
-            </div>
-            <div class="player-card" onclick="setPro('Amitbhai', 98, 88, 52)">
-                <img src="https://i.pinimg.com/736x/8e/4a/02/8e4a02956c38b2848792087595e87a2c.jpg" alt="Amitbhai">
-                <p>AMITBHAI</p>
-            </div>
-            <div class="player-card" onclick="setPro('Tonde Gamer', 100, 90, 48)">
-                <img src="https://i.pinimg.com/736x/21/51/9d/21519d4b47c65360980598822005a765.jpg" alt="Tonde">
-                <p>TONDE</p>
-            </div>
-            <div class="player-card" onclick="setPro('Smruti Gaming', 99, 94, 44)">
-                <img src="https://img.
+
+            <a href="https://www.youtube.com/@SmrutiGaming-n3e" class="yt-link" target="_blank">
+                🔴 SUBSCRIBE CHANNEL
+            </a>
+        </div>
+    </div>
+
+    <div id="overlay">
+        <h2 id="pop-title" style="color:var(--primary)">Settings</h2>
+        <div id="pop-data" style="line-height: 2; font-size: 1.2rem; text-align: left;"></div>
+        <button id="close-btn" onclick="closePop()">CLOSE</button>
+    </div>
+
+    <script>
+        const overlay = document.getElementById('overlay');
+        const popData = document.getElementById('pop-data');
+        const popTitle = document.getElementById('pop-title');
+
+        function showMobileSens() {
+            const model = document.getElementById('mobile-model').value;
+            if(!model) { alert("Please select a phone!"); return; }
+            
+            popTitle.innerText = "Mobile Best Settings";
+            if(model === "poco") {
+                popData.innerHTML = "<b>General:</b> 100 <br><b>Red Dot:</b> 92 <br><b>Fire Button:</b> 42% <br><b>DPI:</b> 450";
+            } else if(model === "realme") {
+                popData.innerHTML = "<b>General:</b> 98 <br><b>Red Dot:</b> 90 <br><b>Fire Button:</b> 48% <br><b>DPI:</b> 420";
+            } else {
+                popData.innerHTML = "<b>General:</b> 95 <br><b>Red Dot:</b> 88 <br><b>Fire Button:</b> 50% <br><b>DPI:</b> 410";
+            }
+            overlay.style.display = 'block';
+        }
+
+        function showPro(name, gen, red, fire, dpi) {
+            popTitle.innerText = name + "'s Settings";
+            popData.innerHTML = `
+                <b>General:</b> ${gen} <br>
+                <b>Red Dot:</b> ${red} <br>
+                <b>Fire Button:</b> ${fire}% <br>
+                <b>DPI:</b> ${dpi}
+            `;
+            overlay.style.display = 'block';
+        }
+
+        function closePop() { overlay.style.display = 'none'; }
+    </script>
+</body>
+</html>
