@@ -1,4 +1,250 @@
 <!DOCTYPE html>
+<html>
+<head>
+    <title>Smruti Gaming - Home</title>
+    <style>
+        body { background-color: #0d0d0d; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; }
+        .box { border: 2px solid #ff4500; padding: 25px; margin: 20px auto; max-width: 500px; border-radius: 15px; background: #151515; }
+        select { padding: 12px; width: 90%; margin: 15px 0; border-radius: 8px; background: #222; color: white; border: 1px solid #ff4500; }
+        button { background: #ff4500; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        #res { display: none; margin-top: 20px; background: rgba(255, 69, 0, 0.2); padding: 15px; border-radius: 10px; text-align: left; }
+        .nav-link { display: inline-block; margin-top: 20px; color: #00ffcc; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <marquee bgcolor="#ff4500">🔥 Get Your Mobile Best Sensitivity Settings Here 🔥</marquee>
+    
+    <div class="box">
+        <h1>SMRUTI GAMING 📱</h1>
+        <p>Select your device to see sensitivity:</p>
+        <select id="device">
+            <option value="">-- Select Phone --</option>
+            <option value="poco">Poco M3 / M-Series</option>
+            <option value="realme">Realme All Models</option>
+            <option value="iphone">iPhone / IOS</option>
+        </select>
+        <br>
+        <button onclick="getSens()">GET SENSITIVITY</button>
+
+        <div id="res">
+            <h3 id="dName" style="color:#ff4500; margin-top:0;"></h3>
+            <p id="dVal"></p>
+        </div>
+        
+        <hr color="#333">
+        <a href="gamers.html" class="nav-link">GO TO PRO GAMERS LIST →</a>
+    </div>
+
+    <script>
+        function getSens() {
+            var d = document.getElementById("device").value;
+            var res = document.getElementById("res");
+            if(!d) return alert("Select Device!");
+            res.style.display = "block";
+            if(d === "poco") {
+                document.getElementById("dName").innerText = "POCO M3 SETTINGS";
+                document.getElementById("dVal").innerHTML = "General: 100 <br>Red Dot: 94 <br>Fire Button: 42%";
+            } else {
+                document.getElementById("dName").innerText = "UNIVERSAL SETTINGS";
+                document.getElementById("dVal").innerHTML = "General: 98 <br>Red Dot: 90 <br>Fire Button: 48%";
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smruti Gaming - Pro Project</title>
+    <style>
+        body { background-color: #0d0d0d; color: white; font-family: 'Segoe UI', sans-serif; }
+        .container { border: 5px double #ff4500; padding: 20px; margin: 10px; }
+        table { width: 100%; border-collapse: collapse; background: #1a1a1a; }
+        th, td { border: 2px solid #ff4500; padding: 12px; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <marquee bgcolor="#ff4500" scrollamount="8" style="color:white; padding:5px; font-weight:bold;">
+        Welcome to Smruti Gaming Official Web Hub 🔥 Best Free Fire Sensitivity & Tips 🔥 Subscribe for More!
+    </marquee>
+
+    <center>
+        <h1>SMRUTI GAMING HUB 🔥</h1>
+        
+        <img src="https://img.icons8.com/color/144/free-fire.png" alt="FF Logo" width="120">
+        
+        <br>
+        <font face="Courier New" size="5" color="#00ffcc">Professional FF Settings</font>
+    </center>
+
+    <div class="container">
+        <p>
+            <b>ନମସ୍କାର ବନ୍ଧୁଗଣ!</b> <br>
+            <i>ଏହି ୱେବସାଇଟ୍‌ଟି <u>Smruti Gaming</u> ଚ୍ୟାନେଲ୍ ଦ୍ୱାରା ପ୍ରସ୍ତୁତ।</i> ଏଠାରେ ଆପଣ ସବୁ ପ୍ରକାର ଗେମିଂ ଟିପ୍ସ ପାଇପାରିବେ।
+        </p>
+
+        <hr color="#ff4500" size="5">
+
+        <table>
+            <caption><b>PRO PLAYER SETTINGS DATA</b></caption>
+            <tr>
+                <th>Gamer Name</th>
+                <th>General Sens</th>
+                <th>Device</th>
+            </tr>
+            <tr>
+                <td>Raistar</td>
+                <td>100</td>
+                <td>Poco / iPhone</td>
+            </tr>
+            <tr>
+                <td>Smruti Gaming</td>
+                <td>98</td>
+                <td>Realme / Vivo</td>
+            </tr>
+        </table>
+
+        <h3 style="color:#ff4500;">🎮 Top Gaming Features:</h3>
+        <ul>
+            <li>One Tap Headshot Settings</li>
+            <li>DPI & Button Size Tips</li>
+        </ul>
+
+        <h3 style="color:#ff4500;">📝 How to Use:</h3>
+        <ol>
+            <li>Select your device model.</li>
+            <li>Copy the sensitivity values.</li>
+        </ol>
+
+        <p>Mathematical Aim Formula: Aim<sub>down</sub> + Drag<sup>up</sup> = Headshot</p>
+
+        <dl>
+            <dt><b>DPI (Dots Per Inch)</b></dt>
+            <dd>ଏହା ମୋବାଇଲ୍ ସ୍କ୍ରିନ୍‌ର ସେନସିଟିଭିଟି ବଢ଼ାଇବା ପାଇଁ ବ୍ୟବହୃତ ହୁଏ।</dd>
+        </dl>
+
+        <center>
+            <a href="https://www.youtube.com/@SmrutiGaming-n3e" target="_blank">
+                <button style="background:#ff0000; color:white; padding:15px; border-radius:10px; cursor:pointer; font-weight:bold;">
+                    SUBSCRIBE MY YOUTUBE CHANNEL
+                </button>
+            </a>
+        </center>
+
+        <br><br>
+
+        <fieldset>
+            <legend>External Content (Nested Frame)</legend>
+            <center>
+                <iframe src="https://www.youtube.com/embed/sample" width="300" height="150" style="border:2px solid #ff4500;"></iframe>
+            </center>
+        </fieldset>
+    </div>
+
+    <marquee direction="right" style="color:#888;">Project by Smruti Gaming - 12th Arts Student</marquee>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smruti Gaming - Pro Project</title>
+    <style>
+        body { background-color: #0d0d0d; color: white; font-family: 'Segoe UI', sans-serif; }
+        .container { border: 5px double #ff4500; padding: 20px; margin: 10px; }
+        table { width: 100%; border-collapse: collapse; background: #1a1a1a; }
+        th, td { border: 2px solid #ff4500; padding: 12px; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <marquee bgcolor="#ff4500" scrollamount="8" style="color:white; padding:5px; font-weight:bold;">
+        Welcome to Smruti Gaming Official Web Hub 🔥 Best Free Fire Sensitivity & Tips 🔥 Subscribe for More!
+    </marquee>
+
+    <center>
+        <h1>SMRUTI GAMING HUB 🔥</h1>
+        
+        <img src="https://img.icons8.com/color/144/free-fire.png" alt="FF Logo" width="120">
+        
+        <br>
+        <font face="Courier New" size="5" color="#00ffcc">Professional FF Settings</font>
+    </center>
+
+    <div class="container">
+        <p>
+            <b>ନମସ୍କାର ବନ୍ଧୁଗଣ!</b> <br>
+            <i>ଏହି ୱେବସାଇଟ୍‌ଟି <u>Smruti Gaming</u> ଚ୍ୟାନେଲ୍ ଦ୍ୱାରା ପ୍ରସ୍ତୁତ।</i> ଏଠାରେ ଆପଣ ସବୁ ପ୍ରକାର ଗେମିଂ ଟିପ୍ସ ପାଇପାରିବେ।
+        </p>
+
+        <hr color="#ff4500" size="5">
+
+        <table>
+            <caption><b>PRO PLAYER SETTINGS DATA</b></caption>
+            <tr>
+                <th>Gamer Name</th>
+                <th>General Sens</th>
+                <th>Device</th>
+            </tr>
+            <tr>
+                <td>Raistar</td>
+                <td>100</td>
+                <td>Poco / iPhone</td>
+            </tr>
+            <tr>
+                <td>Smruti Gaming</td>
+                <td>98</td>
+                <td>Realme / Vivo</td>
+            </tr>
+        </table>
+
+        <h3 style="color:#ff4500;">🎮 Top Gaming Features:</h3>
+        <ul>
+            <li>One Tap Headshot Settings</li>
+            <li>DPI & Button Size Tips</li>
+        </ul>
+
+        <h3 style="color:#ff4500;">📝 How to Use:</h3>
+        <ol>
+            <li>Select your device model.</li>
+            <li>Copy the sensitivity values.</li>
+        </ol>
+
+        <p>Mathematical Aim Formula: Aim<sub>down</sub> + Drag<sup>up</sup> = Headshot</p>
+
+        <dl>
+            <dt><b>DPI (Dots Per Inch)</b></dt>
+            <dd>ଏହା ମୋବାଇଲ୍ ସ୍କ୍ରିନ୍‌ର ସେନସିଟିଭିଟି ବଢ଼ାଇବା ପାଇଁ ବ୍ୟବହୃତ ହୁଏ।</dd>
+        </dl>
+
+        <center>
+            <a href="https://www.youtube.com/@SmrutiGaming-n3e" target="_blank">
+                <button style="background:#ff0000; color:white; padding:15px; border-radius:10px; cursor:pointer; font-weight:bold;">
+                    SUBSCRIBE MY YOUTUBE CHANNEL
+                </button>
+            </a>
+        </center>
+
+        <br><br>
+
+        <fieldset>
+            <legend>External Content (Nested Frame)</legend>
+            <center>
+                <iframe src="https://www.youtube.com/embed/sample" width="300" height="150" style="border:2px solid #ff4500;"></iframe>
+            </center>
+        </fieldset>
+    </div>
+
+    <marquee direction="right" style="color:#888;">Project by Smruti Gaming - 12th Arts Student</marquee>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
 <html lang="or">
 <head>
     <meta charset="UTF-8">
