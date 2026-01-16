@@ -3,164 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Sensitivity - Smruti Gaming</title>
+    <title>Pro FF Sensitivity - Smruti Gaming</title>
     <style>
         body {
             background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://wallpaperaccess.com/full/1535199.jpg');
             background-size: cover;
             background-attachment: fixed;
-            background-position: center;
             color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            text-align: center;
         }
 
         .container {
-            background: rgba(20, 20, 20, 0.95);
+            background: rgba(10, 10, 10, 0.95);
             padding: 30px;
-            border-radius: 20px;
-            display: inline-block;
+            border-radius: 25px;
             border: 2px solid #ff4500;
-            margin-top: 20px;
-            box-shadow: 0px 0px 25px #ff4500;
-            max-width: 400px;
-            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0px 0px 30px rgba(255, 69, 0, 0.3);
         }
 
-        /* Logo Styling */
-        .logo-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 3px solid #ff4500;
-            box-shadow: 0px 0px 15px #ff4500;
-            margin-bottom: 15px;
+        h1 { color: #ff4500; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 20px; }
+
+        /* Pro Players Section */
+        .pro-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
-        h1 { 
-            color: #ff4500; 
-            text-shadow: 2px 2px 5px #000;
-            font-size: 2rem;
-            margin: 10px 0;
-        }
-
-        p { font-size: 1rem; color: #ccc; }
-
-        select {
-            padding: 12px;
-            width: 100%;
-            font-size: 16px;
-            border-radius: 8px;
+        .player-card {
             background: #222;
-            color: white;
-            border: 1px solid #555;
-            margin: 20px 0;
+            padding: 10px;
+            border-radius: 15px;
+            width: 110px;
+            border: 1px solid #444;
+            transition: 0.3s;
+            cursor: pointer;
         }
+
+        .player-card:hover { border-color: #ff4500; transform: scale(1.05); }
+
+        .player-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid #ff4500;
+            margin-bottom: 8px;
+        }
+
+        .player-card p { font-size: 12px; margin: 0; font-weight: bold; }
+
+        /* Form Section */
+        .input-box {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            font-size: 18px;
+            border: none;
+        }
+
+        select { background: #333; color: white; border: 1px solid #555; }
 
         button {
             background: #ff4500;
             color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 18px;
             font-weight: bold;
-            border-radius: 50px;
             cursor: pointer;
-            transition: 0.3s;
-            width: 100%;
+            text-transform: uppercase;
         }
 
-        button:hover {
-            background: #fff;
-            color: #ff4500;
-            box-shadow: 0px 0px 15px #fff;
-        }
+        button:hover { background: #fff; color: #ff4500; }
 
         .result {
-            margin-top: 25px;
-            font-size: 1.1rem;
+            margin-top: 20px;
             background: rgba(255, 69, 0, 0.1);
-            padding: 15px;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 15px;
             display: none;
-            border-left: 5px solid #ff4500;
+            border: 1px solid #ff4500;
             text-align: left;
         }
 
-        .yt-section { margin-top: 30px; }
-
-        .yt-link {
+        .yt-btn {
+            display: inline-block;
+            margin-top: 30px;
+            background: #ff0000;
             color: white;
+            padding: 15px 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
-            background: #ff0000;
-            padding: 12px 20px;
-            border-radius: 8px;
-            display: inline-block;
-            animation: glow 1.5s infinite;
-        }
-
-        @keyframes glow {
-            0% { box-shadow: 0 0 5px #ff0000; }
-            50% { box-shadow: 0 0 20px #ff0000; }
-            100% { box-shadow: 0 0 5px #ff0000; }
+            border-radius: 50px;
+            box-shadow: 0 0 15px #ff0000;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="https://yt3.ggpht.com/ytc/AIdro_ntL7VbU_YmQvN4hQW5jQvR2rM1A2B3C4D5E6F7=s176-c-k-c0x00ffffff-no-rj" alt="Smruti Gaming Logo" class="logo-img">
+        <h1>PRO PLAYER SENSITIVITY 🔥</h1>
         
-        <h1>Smruti Gaming 🔥</h1>
-        <p>Get Best Free Fire Sensitivity</p>
-        
-        <select id="device">
-            <option value="">-- Select Your Phone --</option>
-            <option value="low">2GB - 4GB RAM Mobile</option>
-            <option value="mid">6GB - 8GB RAM Mobile</option>
-            <option value="high">iPhone / High End</option>
-        </select>
-        
-        <button onclick="showSensitivity()">Show Settings</button>
+        <p>Pro Players ଙ୍କ Logo ଉପରେ କ୍ଲିକ୍ କରନ୍ତୁ କିମ୍ବା ନିଜ ଫୋନ୍ ବାଛନ୍ତୁ:</p>
 
-        <div id="result" class="result">
-            <h3 style="color: #ff4500; margin-top: 0;">✅ Settings for You:</h3>
-            <div id="sens-data"></div>
-        </div>
-
-        <div class="yt-section">
-            <a href="https://www.youtube.com/@SmrutiGaming-n3e" class="yt-link" target="_blank">
-                SUBSCRIBE MY CHANNEL
-            </a>
-        </div>
-    </div>
-
-    <script>
-        function showSensitivity() {
-            var device = document.getElementById("device").value;
-            var data = document.getElementById("sens-data");
-            var resultDiv = document.getElementById("result");
-            
-            if(device === "") {
-                alert("Please select your phone first!");
-                return;
-            }
-
-            resultDiv.style.display = "block";
-            
-            if(device === "low") {
-                data.innerHTML = "<b>General:</b> 100 <br> <b>Red Dot:</b> 95 <br> <b>2x Scope:</b> 90 <br> <b>DPI:</b> 410";
-            } else if(device === "mid") {
-                data.innerHTML = "<b>General:</b> 95 <br> <b>Red Dot:</b> 88 <br> <b>2x Scope:</b> 85 <br> <b>DPI:</b> 480";
-            } else {
-                data.innerHTML = "<b>General:</b> 90 <br> <b>Red Dot:</b> 80 <br> <b>2x Scope:</b> 75 <br> <b>DPI:</b> Default";
-            }
-        }
-    </script>
-
-</body>
-</html>
+        <div class="pro-section">
+            <div class="player-card" onclick="setPro('Raistar', 100, 95, 45)">
+                <img src="https://i.pinimg.com/736x/8c/8b/4c/8c8b4c0634699564619736c761e3d74a.jpg" alt="Raistar">
+                <p>RAISTAR</p>
+            </div>
+            <div class="player-card" onclick="setPro('White 444', 100, 100, 40)">
+                <img src="https://i.pinimg.com/736x/eb/45/64/eb4564998064973347c66763f06941f6.jpg" alt="White 444">
+                <p>WHITE 444</p>
+            </div>
+            <div class="player-card" onclick="setPro('Ajjubhai', 95, 85, 50)">
+                <img src="https://i.pinimg.com/originals/9e/7b/03/9e7b03666d910606f23f666b6c0e5a6a.jpg" alt="Ajjubhai">
+                <p>AJJUBHAI</p>
+            </div>
+            <div class="player-card" onclick="setPro('Amitbhai', 98, 88, 52)">
+                <img src="https://i.pinimg.com/736x/8e/4a/02/8e4a02956c38b2848792087595e87a2c.jpg" alt="Amitbhai">
+                <p>AMITBHAI</p>
+            </div>
+            <div class="player-card" onclick="setPro('Tonde Gamer', 100, 90, 48)">
+                <img src="https://i.pinimg.com/736x/21/51/9d/21519d4b47c65360980598822005a765.jpg" alt="Tonde">
+                <p>TONDE</p>
+            </div>
+            <div class="player-card" onclick="setPro('Smruti Gaming', 99, 94, 44)">
+                <img src="https://img.
